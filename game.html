@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Allysa Cinense, Micaella Clariza, Earl Cruz, Maya Feliciano">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="revised" content="23-03-2021">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>        <style>
+            body {
+                background: rgba(206, 211, 224, 0.596);
+            }  
+            .map {
+                position:relative;
+                background-image: url('sprites/barn.png');
+                width: calc(225px * 4.5);
+                height: calc(144px * 4.5);
+                background-size: 100%;
+                margin: 1em auto 0 auto;
+            }
+            .pixelart {
+                image-rendering: pixelated;
+            }
+
+            .tree {
+                position: absolute;
+                background-image: url(sprites/tree.png);
+                width: 128px;
+                height: 128px;
+                background-size: 100%;
+            }
+            .lilbopeep{
+                position: absolute;
+                background-image: url(sprites/bopeep.png);
+                width: 128px;
+                height: 148px;
+                background-size: 100%;
+            }
+            .sheep {
+                cursor: pointer;
+                position: absolute;
+                background-image: url(sprites/sheep.png);
+                width: 100px;
+                height: 100px;
+                background-size: 100%;
+            }
+
+            .bopeep {
+                left: 257px;
+                top: 135px;
+            }
+
+            .tree1 {
+                left: 830px;
+                top: 440px;
+            }
+            .tree2 {
+                left: 720px;
+                top: 180px;
+            }
+            .tree3 {
+                left: 550px;
+                top: 30px;
+            }
+            .tree4 {
+                left: 530px;
+                top: 318px;
+            }
+            .tree5 {
+                left: 130px;
+                top: 418px;
+            }
+            .tree6 {
+                left: 330px;
+                top: 48px;
+            }
+
+            .sheep1 {
+                left: 811px;
+                top: 80px;
+            }
+            .sheep1.rescued {
+                left: 85px;
+                top: 165px;
+            }
+
+            .sheep2 {
+                left: 600px;
+                top: 350px;
+                background-position-x: 33.3%;
+            }
+            .sheep2.rescued {
+                left: 140px;
+                top: 200px;
+            }
+
+            .sheep3 {
+                left: 80px;
+                top: 425px;
+                background-position-x: 66.6%;
+            }
+            .sheep3.rescued {
+                left: 245px;
+                top: 215px;
+            }
+
+            .sheep4 {
+                left: 690px;
+                top: 160px;
+                background-position-x: 100%;
+            }
+            .sheep4.rescued {
+                left: 345px;
+                top: 131px;
+            }
+
+            .wolf {
+                left: 380px;
+                top: 440px;
+                background-position-x: 100%;
+                cursor: pointer;
+                position: absolute;
+                background-image: url(sprites/sheep.png);
+                width: 100px;
+                height: 100px;
+                background-size: 100%;
+            }
+
+            .loose {
+                font-size: 60px;
+                color:rgba(255, 255, 255, 0);
+            }
+            .loose:hover{
+                color:rgba(255, 255, 255, 0);
+            }
+            .text-container {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                font-family: 'Press Start 2P', cursive;
+                background: rgb(20, 20, 20);
+                color: rgb(241, 241, 241);
+                padding: 1vw;
+                margin: 0;
+            }
+            .text-container p {
+                font-size: 1.25vw;
+            }
+            a{
+                color: rgb(216, 216, 216);
+                font-size: 1.25vw;
+            }
+            a:hover{
+                text-decoration: none;
+                color: rgb(216, 216, 216);
+            }
+            #end{
+                display: none;
+            }
+
+        </style>
+        <body>
+            <div class="pixelart map">
+
+            <div class="pixelart bopeep lilbopeep"></div>
+   
+            <div class="pixelart sheep sheep1" story-point="Sheep1"></div>
+            <div class="pixelart sheep sheep3" story-point="Sheep3"></div>
+            <div class="pixelart sheep sheep2" story-point="Sheep2"></div>
+            <div class="pixelart tree tree6"></div> 
+            <div class="pixelart sheep sheep4" story-point="Sheep4"></div>
+            <div class="pixelart wolf"><a href="lose-page.html" class="loose">text</a></div>
+
+            <div class="pixelart tree tree1"></div>
+            <div class="pixelart tree tree2"></div>
+            <div class="pixelart tree tree3"></div>
+            <div class="pixelart tree tree4"></div>
+            <div class="pixelart tree tree5"></div>        
+   
+            </div>
+
+            <div class="text-container">
+                <p class="js-text">Good Luck!</p>
+                <br>
+                <div id="end">
+                    <p>Thank you for finding all the sheep! </p>
+                    <a href="end.html" alt="the end">Click me to go to the next part.</a>
+                </div>
+            </div>
+            <script>
+            var scenarios = [
+                {
+                    "required": [],
+                    "bypass": ["OneSheep"],
+                    "text": "Find the Flock. Good Luck!"
+                },
+                {
+                    "required": ["Sheep3"],
+                    "bypass": ["TwoSheep"],
+                    "text": "Good choice! But be warned: a step to the right could leave you in a plight.",
+                },
+                {
+                    "required": ["OneSheep"],
+                    "bypass": ["TwoSheep"],
+                    "text": "That was close! But be careful, because with a few steps down and a step to the side, you could loose without a fight.",
+                },
+                {
+                    "required": ["TwoSheep"],
+                    "bypass": ["ThreeSheep", "Sheep3"],
+                    "text": "Good choice! But be warned: from the side, two steps to the right could leave you in a plight.",
+                },
+                {
+                    "required": ["TwoSheep"],
+                    "bypass": ["ThreeSheep"],
+                    "text": "Almost done! But remember: don't look down or you could end up with a frown.",
+                },
+                {
+                    "required": ["ThreeSheep"],
+                    "bypass": ["FourSheep"],
+                    "text": "Nice! But with one step down, and two to the left, no more sheep would be left.",
+                },
+                {
+                    "required": ["FourSheep"],
+                    "bypass": ["FiveSheep"],
+                    "text": "",
+                } 
+                ]
+
+            var computedStoryPoints = {
+                "requires": [ "Sheep1", "Sheep2", "Sheep3", "Sheep4" ],
+                "quantities": [
+                    [1, "OneSheep"],
+                    [2, "TwoSheep"],
+                    [3, "ThreeSheep"],
+                    [4, "FourSheep"]
+                ]
+            }
+
+            var sheep = document.querySelectorAll(".sheep");
+            sheep.forEach(sheep => {
+                sheep.addEventListener("click", () => {
+                    sheep.classList.toggle("rescued");
+                    toggleStoryPoint( sheep.getAttribute("story-point") )
+                    refreshScenario();
+                    })
+                });
+
+
+            var storyPoints = {};
+
+            function toggleStoryPoint(incomingStoryPoint) {
+                if (storyPoints[incomingStoryPoint]) {
+                    delete storyPoints[incomingStoryPoint]
+                } else {
+                    storyPoints[incomingStoryPoint] = true;
+                    }
+                }
+
+            function getAllKnownStoryPoints() { 
+   
+                var acquiredCount = computedStoryPoints.requires.filter(sp => {
+                    return storyPoints[sp]
+                }).length;
+   
+                var computed = {};
+                computedStoryPoints.quantities.forEach(q => {
+                        if (acquiredCount >= q[0]) {
+                            computed[q[1]] = true;
+                        }
+                })
+   
+                return {
+                    ...storyPoints,
+                    ...computed
+                    }
+                }
+            function refreshScenario() {
+                var known = getAllKnownStoryPoints();
+                var scenario = scenarios.find(s => {
+   
+                    for (var i=0; i<=s.bypass.length; i++) {
+                        if ( known[s.bypass[i]] ) {
+                        return false;
+                        }
+                    }
+      
+                    return s.required.every(entry => known[entry])
+                    })
+   
+                    document.querySelector(".js-text").textContent = scenario.text;
+                
+                    var x = document.getElementById("end");
+                    if (scenario.text == ""){
+                        x.style.display = "inline-block";
+                    } else {
+                        x.style.display = "none";
+                    }
+            }
+        </script>
+        </body>
